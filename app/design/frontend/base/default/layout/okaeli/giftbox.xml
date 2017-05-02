@@ -1,0 +1,47 @@
+<?xml version="1.0"?>
+<!--
+/**
+ * Okaeli_Giftbox  Extension
+ *
+ * NOTICE OF LICENSE
+ *
+ * This source file is subject to the GNU GENERAL PUBLIC LICENSE Version 3
+ * that is bundled with this package in the file LICENSE
+ *
+ * @category Okaeli
+ * @package Okaeli_Giftbox
+ * @copyright  Copyright (c)  2017 Julien Loizelet
+ * @author     Julien Loizelet <julienloizelet@okaeli.com>
+ * @license    GNU GENERAL PUBLIC LICENSE Version 3
+ *
+ */
+
+ /**
+ *
+ * @category Okaeli
+ * @package  Okaeli_Giftbox
+ * @module   Giftbox
+ * @author   Julien Loizelet <julienloizelet@okaeli.com>
+ *
+ */
+ -->
+<layout version="0.1.0">
+    <checkout_cart_index>
+        <reference name="head">
+            <action method="addItem" ifconfig="okaeli_giftbox/settings/enabled">
+                <type>skin_js</type>
+                <name>js/okaeli/giftbox.js</name>
+                <params/>
+            </action>
+        </reference>
+        <reference name="checkout.cart">
+                <block type="core/template" name="okaeli.giftbox.form" as="okaeli.giftbox.form">
+                    <action method="setTemplate" ifconfig="okaeli_giftbox/settings/enabled"><template>okaeli/giftbox/form.phtml</template></action>
+                </block>
+        </reference>
+    </checkout_cart_index>
+
+    <okaeli_giftbox_index_giftboxincart>
+        <update handle="checkout_cart_index" />
+    </okaeli_giftbox_index_giftboxincart>
+</layout>

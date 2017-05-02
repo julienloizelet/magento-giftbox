@@ -1,0 +1,83 @@
+<?xml version="1.0"?>
+<!--
+/**
+ * Okaeli_Giftbox  Extension
+ *
+ * NOTICE OF LICENSE
+ *
+ * This source file is subject to the GNU GENERAL PUBLIC LICENSE Version 3
+ * that is bundled with this package in the file LICENSE
+ *
+ * @category Okaeli
+ * @package Okaeli_Giftbox
+ * @copyright  Copyright (c)  2017 Julien Loizelet 
+ * @author     Julien Loizelet <julienloizelet@okaeli.com>
+ * @license    GNU GENERAL PUBLIC LICENSE Version 3
+ * 
+ */
+ 
+ /**
+ *
+ * @category Okaeli
+ * @package  Okaeli_Giftbox
+ * @module   Giftbox
+ * @author   Julien Loizelet <julienloizelet@okaeli.com>
+ *
+ */
+ -->
+<config>
+    <modules>
+        <Okaeli_Giftbox>
+            <version>0.0.1</version>
+        </Okaeli_Giftbox>
+    </modules>
+    <global>
+        <helpers>
+            <okaeli_giftbox>
+                <class>Okaeli_Giftbox_Helper</class>
+            </okaeli_giftbox>
+        </helpers>
+        <models>
+            <okaeli_giftbox>
+                <class>Okaeli_Giftbox_Model</class>
+            </okaeli_giftbox>
+        </models>
+    </global>
+    <frontend>
+        <layout>
+            <updates>
+                <okaeli_giftbox>
+                    <file>okaeli/giftbox.xml</file>
+                </okaeli_giftbox>
+            </updates>
+        </layout>
+        <translate>
+            <modules>
+                <okaeli_giftbox>
+                    <files>
+                        <default>Okaeli_Giftbox.csv</default>
+                    </files>
+                </okaeli_giftbox>
+            </modules>
+        </translate>
+        <events>
+            <sales_quote_remove_item>
+                <observers>
+                    <okaeli_giftbox_sales_quote_remove_item>
+                        <class>okaeli_giftbox/observer</class>
+                        <method>onRemoveItem</method>
+                    </okaeli_giftbox_sales_quote_remove_item>
+                </observers>
+            </sales_quote_remove_item>
+        </events>
+        <routers>
+            <okaeli_giftbox>
+                <use>standard</use>
+                <args>
+                    <module>Okaeli_Giftbox</module>
+                    <frontName>giftbox</frontName>
+                </args>
+            </okaeli_giftbox>
+        </routers>
+    </frontend>
+</config>

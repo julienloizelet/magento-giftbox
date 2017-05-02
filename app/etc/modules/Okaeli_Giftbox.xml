@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+/**
+ * Okaeli_Giftbox  Extension
+ *
+ * NOTICE OF LICENSE
+ *
+ * This source file is subject to the GNU GENERAL PUBLIC LICENSE Version 3
+ * that is bundled with this package in the file LICENSE
+ *
+ * @category Okaeli
+ * @package Okaeli_Giftbox
+ * @copyright  Copyright (c)  2017 Julien Loizelet
+ * @author     Julien Loizelet <julienloizelet@okaeli.com>
+ * @license    GNU GENERAL PUBLIC LICENSE Version 3
+ *
+ */
+
+ /**
+ *
+ * @category Okaeli
+ * @package  Okaeli_Giftbox
+ * @module   Giftbox
+ * @author   Julien Loizelet <julienloizelet@okaeli.com>
+ *
+ */
+ -->
+<config>
+    <modules>
+        <Okaeli_Giftbox>
+            <active>true</active>
+            <codePool>community</codePool>
+            <depends>
+                <Mage_Catalog/>
+                <Mage_Checkout/>
+                <Mage_Sales/>
+            </depends>
+        </Okaeli_Giftbox>
+    </modules>
+</config>

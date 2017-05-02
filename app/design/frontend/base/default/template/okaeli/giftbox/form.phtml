@@ -1,0 +1,16 @@
+<?php
+$_helper = Mage::helper('okaeli_giftbox');
+$_isSecure = Mage::app()->getStore()->isCurrentlySecure();
+$_url = $this->getUrl('giftbox/index/giftboxInCart', array('_secure' => $_isSecure));
+?>
+<div id="cart-giftbox">
+    <form id="cart-giftbox-form" action="<?php echo $_url;?>">
+        <label for="giftbox-checkbox" class=""><span><?php echo $this->__('This is a gift') ?></span></label>
+        <input id="giftbox-checkbox" type="checkbox" name="giftbox" <?php if($_helper->getGiftboxQuoteItemId(true)):?>checked="checked"<?php endif; ?>/>
+    </form>
+</div>
+<script type="text/javascript">
+    //<![CDATA[
+    var giftboxInCartUrl = '<?php echo $_url;?>';
+    //]]>
+</script>

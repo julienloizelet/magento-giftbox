@@ -1,0 +1,11 @@
+
+FILE: ...gento1-giftbox/app/code/community/Okaeli/Giftbox/Helper/Data.php
+----------------------------------------------------------------------
+FOUND 0 ERRORS AND 1 WARNING AFFECTING 1 LINE
+----------------------------------------------------------------------
+ 46 | WARNING | getFirstItem does not limit the result of collection
+    |         | load to one item.
+----------------------------------------------------------------------
+
+Time: 283ms; Memory: 5.75Mb
+
